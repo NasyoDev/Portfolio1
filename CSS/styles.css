@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +15,21 @@
     --border-color: #7d571c;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
 body {
     background: var(--bg-gradient);
     min-height: 100vh;
     color: var(--text-color);
     overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
 }
 
 .navbar {
@@ -26,6 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 8%;
+    width: 100%;
 }
 
 .logo {
@@ -37,6 +49,7 @@ body {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 35px;
 }
 
@@ -63,6 +76,7 @@ body {
     font-weight: 600;
     font-size: 15px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .contact-btn:hover {
@@ -76,6 +90,8 @@ body {
     justify-content: space-between;
     padding: 40px 8%;
     min-height: calc(100vh - 100px);
+    width: 100%;
+    gap: 30px;
 }
 
 .main-image-container {
@@ -83,11 +99,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 0;
 }
 
 .blob-shape {
     width: 420px;
     height: 420px;
+    max-width: 100%;
     border-radius: 45% 55% 52% 48% / 51% 42% 58% 49%;
     border: 2px solid var(--border-color);
     display: flex;
@@ -108,6 +126,7 @@ body {
 .main-content {
     flex: 1.1;
     padding-left: 50px;
+    min-width: 0;
 }
 
 .main-content h1 {
@@ -115,6 +134,7 @@ body {
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 5px;
+    overflow-wrap: break-word;
 }
 
 .main-content h1 .highlight {
@@ -127,6 +147,7 @@ body {
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 20px;
+    overflow-wrap: break-word;
 }
 
 .main-content h2 .typing-text {
@@ -156,6 +177,7 @@ body {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .social-icon {
@@ -198,6 +220,7 @@ body {
 .skills-section {
     padding: 60px 8%;
     text-align: center;
+    width: 100%;
 }
 
 .section-title {
@@ -252,12 +275,10 @@ body {
     color: var(--text-color);
 }
 
-
-
-
 .about-section {
     padding: 60px 8%;
     text-align: center;
+    width: 100%;
 }
 
 .about-description {
@@ -268,13 +289,10 @@ body {
     margin: 0 auto;
 }
 
-
-
-
-
 .portfolio-section {
     padding: 60px 8%;
     text-align: center;
+    width: 100%;
 }
 
 .portfolio-container {
@@ -287,6 +305,7 @@ body {
 
 .portfolio-card {
     width: 320px;
+    max-width: 100%;
     height: 200px;
     border-radius: 12px;
     overflow: hidden;
@@ -305,19 +324,16 @@ body {
     object-fit: cover;
 }
 
-
-
-
-
 .services-section {
     padding: 60px 8%;
     text-align: center;
+    width: 100%;
 }
 
 .services-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -328,6 +344,7 @@ body {
     border-radius: 16px;
     padding: 35px 25px;
     width: 280px;
+    max-width: 100%;
     text-align: center;
     box-shadow: 0 10px 25px rgba(92, 58, 11, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -357,17 +374,16 @@ body {
     line-height: 1.5;
 }
 
-
-
 .blogs-section {
     padding: 60px 8%;
     text-align: center;
+    width: 100%;
 }
 
 .blogs-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
     flex-wrap: wrap;
     max-width: 900px;
@@ -380,6 +396,7 @@ body {
     border-radius: 16px;
     padding: 30px 25px;
     width: 320px;
+    max-width: 100%;
     text-align: left;
     box-shadow: 0 10px 25px rgba(92, 58, 11, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -419,10 +436,12 @@ body {
 .contact-section {
     padding: 60px 8% 80px 8%;
     text-align: center;
+    width: 100%;
 }
 
 .contact-form {
     max-width: 550px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -464,4 +483,293 @@ body {
 .send-btn:hover {
     background-color: #482c08;
     transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .main-section {
+        padding: 40px 5%;
+        gap: 20px;
+    }
+
+    .blob-shape {
+        width: 340px;
+        height: 340px;
+    }
+
+    .main-content {
+        padding-left: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 40px;
+    }
+
+    .main-content h2 {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 22px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .main-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 35px 6%;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .main-image-container {
+        width: 100%;
+    }
+
+    .blob-shape {
+        width: 300px;
+        height: 300px;
+        max-width: 85vw;
+        max-height: 85vw;
+    }
+
+    .main-content {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .main-content h1 {
+        font-size: 38px;
+    }
+
+    .main-content h2 {
+        font-size: 29px;
+    }
+
+    .main-content p {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    .socialmedia {
+        justify-content: center;
+    }
+
+    .cv-btn {
+        margin: 0 auto;
+    }
+
+    .skills-section,
+    .about-section,
+    .portfolio-section,
+    .services-section,
+    .blogs-section,
+    .contact-section {
+        padding: 50px 6%;
+    }
+
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .skills-container,
+    .portfolio-container,
+    .services-container,
+    .blogs-container {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .portfolio-card {
+        width: min(100%, 320px);
+    }
+
+    .service-card,
+    .blog-card {
+        width: min(100%, 350px);
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 18px 4%;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px 16px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .contact-btn {
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+
+    .main-section {
+        padding: 25px 5%;
+        gap: 25px;
+    }
+
+    .blob-shape {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main-content h1 {
+        font-size: clamp(27px, 8vw, 31px);
+    }
+
+    .main-content h2 {
+        font-size: clamp(20px, 6vw, 23px);
+        margin-bottom: 15px;
+    }
+
+    .main-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .cv-btn {
+        padding: 11px 25px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    .skills-section,
+    .about-section,
+    .portfolio-section,
+    .services-section,
+    .blogs-section {
+        padding: 45px 5%;
+    }
+
+    .skills-container {
+        gap: 22px;
+    }
+
+    .skill-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 21px;
+    }
+
+    .skill-card p {
+        font-size: 12px;
+    }
+
+    .about-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .portfolio-card {
+        width: 100%;
+        height: 190px;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 28px 20px;
+    }
+
+    .blog-card {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .contact-section {
+        padding: 45px 6% 55px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+
+    .send-btn {
+        align-self: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .main-content h1 {
+        font-size: 27px;
+    }
+
+    .main-content h2 {
+        font-size: 20px;
+    }
+
+    .blob-shape {
+        width: 210px;
+        height: 210px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
 }
